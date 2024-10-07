@@ -1,0 +1,117 @@
+.catalog {
+	margin-top: 2rem;
+
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	gap: 2rem;
+
+	list-style: none;
+}
+
+@media (min-width: 768px) {
+	.catalog {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+.catalog-product {
+	/* background-color: var(--light); */
+	border: 1px solid var(--light);
+	height: 100%;
+	padding: 2rem;
+	border-radius: 1rem;
+
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	gap: 1rem 0;
+}
+
+.addButton {
+	border: 2px solid var(--medium);
+	background-color: var(--white);
+	border-radius: 50%;
+	width: 45px;
+	height: 45px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	cursor: pointer;
+}
+
+.addButton:hover {
+	box-shadow: inset 2px 2px 1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.catalog-product:has(.productThumbnail:hover) {
+	box-shadow: inset 5px 5px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.productThumbnail {
+	text-align: center;
+	cursor: pointer;
+}
+
+.productBrand {
+	font-size: 16px;
+	font-weight: 700;
+	letter-spacing: 0.1rem;
+	text-transform: uppercase;
+
+	color: var(--dark);
+}
+
+.productTitle {
+	font-size: 36px;
+	font-weight: 700;
+	line-height: 1;
+}
+
+.tags {
+	display: flex;
+	gap: 0.5rem;
+}
+
+.tags h5 {
+	padding: 0.2rem 1rem;
+	background-color: var(--accent);
+	border-radius: 1rem;
+	color: var(--light);
+}
+
+.add {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	margin-top: auto;
+}
+
+.price {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+}
+
+.discountTag {
+	font-size: 18px;
+	font-weight: 700;
+
+	color: var(--white);
+	background-color: var(--darkest);
+	padding: 0.2rem 0.5rem;
+	border-radius: 0.5rem;
+
+	margin-left: 1rem;
+}
+
+.discountedPrice {
+	font-size: 28px;
+	font-weight: 700;
+}
+
+.add a {
+	color: var(--accent);
+}
